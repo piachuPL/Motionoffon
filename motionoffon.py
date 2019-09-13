@@ -27,12 +27,14 @@ class Kamera:
         con = 'curl http://localhost:8080/{}/detection/{}'.format(self.num, self.state)
         return os.system(con)
 
+# function tacking a arguments Kamera class and setting up start motion detection
 def start_rec(*argv):
         for arg in argv:
             arg.state = 'start'                
             arg.consol()
             time.sleep(arg.t_pause)
 
+# function tacking a arguments Kamera class and setting up pause motion detection
 def pause_rec(*argv):
         for arg in argv:
             arg.state = 'pause'                        
@@ -60,7 +62,7 @@ while True:
          d_stat = 'close'
 #         print('zamknietet') 
      elif input_state == False and d_stat == 'close':
-         time.sleep(120)
+         time.sleep(120)                                        #setting up a delay 
          pause_rec(kam1, kam2, kam3)
          d_stat = 'open'
 #         print('OTWARTE')
