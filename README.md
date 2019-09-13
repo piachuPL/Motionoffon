@@ -8,3 +8,7 @@ Motion detection ON = 'curl http://localhost:8080/0/detection/start'
 
 
 In my case button is attached to pin 27 and GND on pin 25
+
+You can add script to /data/etc/userinit.sh 
+
+a  line: "python /data/etc/motionoffon.py&"
