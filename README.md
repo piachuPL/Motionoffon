@@ -4,11 +4,11 @@ Whole idea of script is watching state of state GPiO pins and setting up a motio
 For cam nr 0:
 
 Motion detection OFF = 'curl http://localhost:8080/0/detection/pause'
-Motion detection ON = 'curl http://localhost:8080/0/detection/start'
 
+Motion detection ON = 'curl http://localhost:8080/0/detection/start'
 
 In my case button is attached to pin 27 and GND on pin 25
 
-You can add script to /data/etc/userinit.sh 
-
-a  line: "python /data/etc/motionoffon.py&"
+You can add script to /data/etc/userinit.sh
+a line:
+python /data/etc/motionoffon.py&
